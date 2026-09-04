@@ -1,8 +1,3 @@
-export const TOKEN_KEYS = {
-  ACCESS: "accessToken",
-  REFRESH: "refreshToken",
-};
-
 export const DEFAULT_EMPLOYEE_QUERY = {
   page: 1,
   limit: 10,
