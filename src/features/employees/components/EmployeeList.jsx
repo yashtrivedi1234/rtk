@@ -159,7 +159,8 @@ export default function EmployeeList() {
   };
 
   return (
-    <section className="employee-list">
+    <main className="page">
+      <section className="employee-list">
       <header className="page-header">
         <div>
           <h1>Employees</h1>
@@ -276,6 +277,7 @@ export default function EmployeeList() {
           }
         }}
       />
-    </section>
+      </section>
+    </main>
   );
 }

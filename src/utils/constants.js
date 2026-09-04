@@ -12,6 +12,7 @@ export const DEBOUNCE_MS = 400;
 export const API_TIMEOUT_MS = 10000;
 
 export const DEPARTMENTS = [
+
   "IT",
   "HR",
   "Finance",
@@ -35,6 +36,3 @@ export const SORT_ORDER_OPTIONS = [
 ];
 
 export const PAGE_SIZE_OPTIONS = [5, 10, 20, 50];
-
-/** HTTP statuses that should never be retried. */
-export const NON_RETRYABLE_STATUSES = [400, 401, 403, 404, 409, 422, 429];

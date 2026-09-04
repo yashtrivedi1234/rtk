@@ -1,30 +1,18 @@
 import { baseApi } from "./baseApi";
 import {
-  getCreateInvalidationTags,
-  getDeleteInvalidationTags,
-  getUpdateInvalidationTags,
-} from "./employeeCacheTags";
-import {
-  mapEmployeeListParams,
-  normalizeEmployee,
   normalizeEmployeeList,
+  toJsonServerListParams,
 } from "./employeeTransforms";
 
-/**
- * Employee endpoints — REST-shaped args only.
- * json-server mapping lives in adapters/jsonServerEmployees.js.
- */
 export const employeeApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
     getEmployees: builder.query({
       query: (args = {}) => ({
         url: "/employees",
-        params: mapEmployeeListParams(args),
+        params: toJsonServerListParams(args),
       }),
-
       transformResponse: (response, _meta, arg) =>
         normalizeEmployeeList(response, arg),
-
       providesTags: (result) =>
         result
           ? [
@@ -39,9 +27,6 @@ export const employeeApi = baseApi.injectEndpoints({
 
     getEmployeeById: builder.query({
       query: (id) => `/employees/${id}`,
-
-      transformResponse: (response) => normalizeEmployee(response),
-
       providesTags: (_result, _error, id) => [{ type: "Employee", id }],
     }),
 
@@ -51,8 +36,7 @@ export const employeeApi = baseApi.injectEndpoints({
         method: "POST",
         body: employee,
       }),
-
-      invalidatesTags: getCreateInvalidationTags,
+      invalidatesTags: [{ type: "Employee", id: "LIST" }],
     }),
 
     updateEmployee: builder.mutation({
@@ -61,10 +45,13 @@ export const employeeApi = baseApi.injectEndpoints({
         method: "PATCH",
         body: employeeData,
       }),
-
-      // Pessimistic + tags: list edits often have no detail cache; invalidation is enough.
       invalidatesTags: (_result, error, { id }) =>
-        error ? [] : getUpdateInvalidationTags(id),
+        error
+          ? []
+          : [
+              { type: "Employee", id },
+              { type: "Employee", id: "LIST" },
+            ],
     }),
 
     deleteEmployee: builder.mutation({
@@ -72,8 +59,10 @@ export const employeeApi = baseApi.injectEndpoints({
         url: `/employees/${id}`,
         method: "DELETE",
       }),
-
-      invalidatesTags: (_result, _error, id) => getDeleteInvalidationTags(id),
+      invalidatesTags: (_result, _error, id) => [
+        { type: "Employee", id },
+        { type: "Employee", id: "LIST" },
+      ],
     }),
   }),
 });
