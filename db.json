@@ -1,8 +1,148 @@
 {
-    "emloyees":[
-        {
-            "id": 1,
-            "role": "Yash Trivedi"
-        }
-    ]
+  "employees": [
+    {
+      "id": "1",
+      "name": "Aisha Khan",
+      "email": "aisha.khan@example.com",
+      "phone": "9876543210",
+      "department": "IT",
+      "designation": "Frontend Engineer",
+      "salary": 1200000,
+      "joiningDate": "2023-04-12",
+      "status": "Active",
+      "createdAt": "2023-04-12"
+    },
+    {
+      "id": "2",
+      "name": "Rohan Mehta",
+      "email": "rohan.mehta@example.com",
+      "phone": "9876543211",
+      "department": "HR",
+      "designation": "HR Manager",
+      "salary": 950000,
+      "joiningDate": "2022-11-01",
+      "status": "Active",
+      "createdAt": "2022-11-01"
+    },
+    {
+      "id": "3",
+      "name": "Priya Sharma",
+      "email": "priya.sharma@example.com",
+      "phone": "9876543212",
+      "department": "Finance",
+      "designation": "Accountant",
+      "salary": 850000,
+      "joiningDate": "2021-08-20",
+      "status": "On Leave",
+      "createdAt": "2021-08-20"
+    },
+    {
+      "id": "4",
+      "name": "Vikram Patel",
+      "email": "vikram.patel@example.com",
+      "phone": "9876543213",
+      "department": "Sales",
+      "designation": "Sales Lead",
+      "salary": 1100000,
+      "joiningDate": "2020-02-14",
+      "status": "Active",
+      "createdAt": "2020-02-14"
+    },
+    {
+      "id": "5",
+      "name": "Neha Gupta",
+      "email": "neha.gupta@example.com",
+      "phone": "9876543214",
+      "department": "Marketing",
+      "designation": "Content Strategist",
+      "salary": 780000,
+      "joiningDate": "2024-01-09",
+      "status": "Inactive",
+      "createdAt": "2024-01-09"
+    },
+    {
+      "id": "6",
+      "name": "Arjun Nair",
+      "email": "arjun.nair@example.com",
+      "phone": "9876543215",
+      "department": "Operations",
+      "designation": "Ops Coordinator",
+      "salary": 720000,
+      "joiningDate": "2023-09-18",
+      "status": "Active",
+      "createdAt": "2023-09-18"
+    },
+    {
+      "id": "7",
+      "name": "Sara Ali",
+      "email": "sara.ali@example.com",
+      "phone": "9876543216",
+      "department": "IT",
+      "designation": "Backend Engineer",
+      "salary": 1300000,
+      "joiningDate": "2022-06-30",
+      "status": "Active",
+      "createdAt": "2022-06-30"
+    },
+    {
+      "id": "8",
+      "name": "Kabir Singh",
+      "email": "kabir.singh@example.com",
+      "phone": "9876543217",
+      "department": "Finance",
+      "designation": "Financial Analyst",
+      "salary": 900000,
+      "joiningDate": "2021-12-05",
+      "status": "Active",
+      "createdAt": "2021-12-05"
+    },
+    {
+      "id": "9",
+      "name": "Meera Iyer",
+      "email": "meera.iyer@example.com",
+      "phone": "9876543218",
+      "department": "HR",
+      "designation": "Recruiter",
+      "salary": 650000,
+      "joiningDate": "2024-03-22",
+      "status": "Active",
+      "createdAt": "2024-03-22"
+    },
+    {
+      "id": "10",
+      "name": "Dev Joshi",
+      "email": "dev.joshi@example.com",
+      "phone": "9876543219",
+      "department": "Marketing",
+      "designation": "Brand Manager",
+      "salary": 1050000,
+      "joiningDate": "2019-07-11",
+      "status": "Active",
+      "createdAt": "2019-07-11"
+    },
+    {
+      "id": "11",
+      "name": "Ananya Rao",
+      "email": "ananya.rao@example.com",
+      "phone": "9876543220",
+      "department": "Sales",
+      "designation": "Account Executive",
+      "salary": 880000,
+      "joiningDate": "2023-01-16",
+      "status": "On Leave",
+      "createdAt": "2023-01-16"
+    },
+    {
+      "id": "12",
+      "name": "Ishaan Verma",
+      "email": "ishaan.verma@example.com",
+      "phone": "9876543221",
+      "department": "IT",
+      "designation": "DevOps Engineer",
+      "salary": 1250000,
+      "joiningDate": "2022-05-03",
+      "status": "Active",
+      "createdAt": "2022-05-03"
+    }
+  ]
 }
